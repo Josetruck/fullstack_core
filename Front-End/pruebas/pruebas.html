@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+    <meta charset="UTF-8" /> 
+    <title>JavaScript</title> 
+    <script language="JavaScript"> 
+        //Creamos una funcion externa 
+        function muestraMensaje() { 
+            alert('Gracias por pinchar'); 
+        } 
+        
+        // Asigno la función externa al elemento 
+        window.onload = function() { 
+            document.getElementById("pinchable").onclick = muestraMensaje; 
+        } 
+    </script> 
+</head> 
+<body> 
+    <input id="pinchable" type="button" value="Púlsame" /> 
+</body> 
+</html>

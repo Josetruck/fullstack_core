@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo de los perros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tu album de perros</h1>
+    <div id="todo">
+    <div id="principal">
+        <img src="" alt="" id="muestra" style=""><br>
+        <button onclick="ejecutar()">RANDOM</button>
+        <button onclick="pintar(perromuestra)">Guardar</button>
+        <button onclick="grafica()">Mostrar Gráfica</button>
+    </div>
+    <div id="grid">
+    </div>
+    <script src="script.js"></script>
+    </div>
+    <div>
+        <canvas id="myChart" style="visibility: hidden ;"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const labels = [
+            `${Object.keys(resultado)[0]}`,
+            `${Object.keys(resultado)[1]}`,
+            `${Object.keys(resultado)[2]}`,
+            `${Object.keys(resultado)[3]}`,
+            `${Object.keys(resultado)[4]}`,
+            `${Object.keys(resultado)[5]}`,
+            `${Object.keys(resultado)[6]}`,
+            `${Object.keys(resultado)[7]}`,
+            `${Object.keys(resultado)[8]}`,
+            `${Object.keys(resultado)[9]}`,
+            `${Object.keys(resultado)[10]}`,
+            `${Object.keys(resultado)[11]}`,
+            `${Object.keys(resultado)[12]}`,
+            `${Object.keys(resultado)[13]}`,
+            `${Object.keys(resultado)[14]}`,
+            `${Object.keys(resultado)[15]}`,
+            `${Object.keys(resultado)[16]}`,
+            `${Object.keys(resultado)[17]}`,
+            `${Object.keys(resultado)[18]}`,
+            `${Object.keys(resultado)[19]}`,
+            `${Object.keys(resultado)[20]}`,
+        ];
+        
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Grafica de perricos',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [
+                `${Object.values(resultado)[0]}`,
+            `${Object.values(resultado)[1]}`,
+            `${Object.values(resultado)[2]}`,
+            `${Object.values(resultado)[3]}`,
+            `${Object.values(resultado)[4]}`,
+            `${Object.values(resultado)[5]}`,
+            `${Object.values(resultado)[6]}`,
+            `${Object.values(resultado)[7]}`,
+            `${Object.values(resultado)[8]}`,
+            `${Object.values(resultado)[9]}`,
+            `${Object.values(resultado)[10]}`,
+            `${Object.values(resultado)[11]}`,
+            `${Object.values(resultado)[12]}`,
+            `${Object.values(resultado)[13]}`,
+            `${Object.values(resultado)[14]}`,
+            `${Object.values(resultado)[15]}`,
+            `${Object.values(resultado)[16]}`,
+            `${Object.values(resultado)[17]}`,
+            `${Object.values(resultado)[18]}`,
+            `${Object.values(resultado)[19]}`,
+            `${Object.values(resultado)[20]}`,
+                   ],
+            }]
+        };
+        
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {}
+        };
+        </script>
+      <script>
+          const myChart = new Chart(
+              document.getElementById('myChart'),
+              config
+              );
+              </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+#todo{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+#principal{
+    display: flex;
+    flex-direction: column;
+    padding: 150px 30px;
+    height: 300px;
+    width: 300px;
+}
+#grid{
+    display: grid;
+    grid-template-columns: 180px 180px 180px 180px 180px;
+    grid-template-rows: 180px 180px 180px 180px;
+    grid-template-areas: 
+    "d1 d2 d3 d4 d5"
+    "d6 d7 d8 d9 d10"
+    "d11 d12 d13 d14 d15"
+    "d16 d17 d18 d19 d20";
+    }
+img{
+    border: 5px black solid;
+    padding: 10px;
+}
+button{
+    margin-top: 5px;
+    width: 180px;
+    align-self: center;
+}

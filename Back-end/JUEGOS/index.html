@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="block" 
+    style="width: 100px ;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;"><img src="fary.png" alt="">
+    </div>
+    <h1 style="position:fixed ;
+                top:700px; left: 1000px;">Mandanga</h1>
+    <script>
+        let modifier = 40;
+        const block = document.getElementById("block");
+        let moveDown = document.addEventListener('keydown', (event) => {
+                switch (event.key) {
+                    case 'ArrowUp': block.style.top = `${parseInt(block.style.top) - modifier}px`; break;
+                    case 'ArrowDown': block.style.top = `${parseInt(block.style.top) + modifier}px`; break;
+                    case 'ArrowLeft': block.style.left = `${parseInt(block.style.left) - modifier}px`; break;
+                    case 'ArrowRight': block.style.left = `${parseInt(block.style.left) + modifier}px`; break;
+                }
+        })
+    </script>
+</body>
+</html>

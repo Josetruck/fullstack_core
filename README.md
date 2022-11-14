@@ -1,0 +1,2 @@
+# fullstackcore
+Contenido del Core

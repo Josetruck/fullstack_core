@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo EJS</title>
+</head>
+
+<body>
+    Esto es un ejemplo EJS
+
+    <% for(let i=0 ; i < 3 ; i++) { %>
+        <p>ejs is easy</p>
+        <% } %>
+
+            <ul>
+                <%for(let i=0; i < 3; i++) {%>
+                    <li>
+                        <%= i + 1 %>
+                    </li>
+                    <%}%>
+            </ul>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Número.</th>
+                        <th>Etiquetas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% tabledata.forEach((e)=> { %>
+                        <tr>
+                            <td>
+                                <%=e.col1%>
+                            </td>
+                            <td>
+                                <%=e.col2%>
+                            </td>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+</body>
+
+</html>

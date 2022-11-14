@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP y HTTPS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="contenido">
+        <nav>
+            <a href="index.html"><div>Home</div></a>
+            <a href="HTTP.html"><div style="font-weight: 900; border: 4px solid black;">HTTP</div></a>
+            <a href="HTTPS.html"><div>HTTPS</div></a>
+        </nav>
+        <div class="cabecera">
+            <img class="icono" src="img/Friki-Meme_29.bmp" alt="" srcset="">
+            <h1>HTTP</h1>
+        </div>
+        <h2>¿Qué es HTTP?</h2>
+        <p> HTTP son las siglas de "Hyper Text Transport Protocol". Es decir, un protocolo de transferencia de datos
+            entre
+            un servidor y un cliente.</p>
+        <h2>Un poco de historia:</h2>
+        <p> Durante muchos años, el protocolo HTTP ha sido el más utilizado en la Red. Desde que comenzó su desarrollo
+            en
+            1989, se han lanzado diferentes versiones más avanzadas que han sabido adaptarse a las necesidades y al
+            avance
+            tecnológico del momento:
+
+        <p>&#128406;<strong> HTTP/0.9:</strong> La primera versión del protocolo HTTP, denominada así a posteriori para
+            poder identificarlas de las
+            siguientes versiones. Este protocolo no utiliza cabeceras HTTP por lo que solamente podían transferirse
+            archivos
+            en HTML. Además, no existían los códigos de estado HTTP como los conocemos hoy en día.
+        </p>
+        <p>&#128406;<strong> HTTP/1.0:</strong> Mucho más flexible que la versión anterior tanto para navegadores como
+            para los servidores web. Permite
+            los métodos de petición GET, HEAD y POST y todavía es utilizada hoy en día en algunos servidores proxy.
+        </p>
+        <div class="cabecera">
+            <img class="icono" src="img/Friki-Meme_29.bmp" alt="" srcset="">
+            <ul>
+                <li>El método <strong>GET</strong> obtiene información del servidor.</li>
+                <li>El método <strong>HEAD</strong> obtiene la cabecera de la página.</li>
+                <li>El método <strong>POST</strong> se utiliza para enviar información al servidor.</li>
+            </ul>
+        </div>
+        <p> &#128406;<strong> HTTP/1.1:</strong> Publicada en 1997 y añade bastantes mejoras con relación a la versión
+            anterior. En esta versión ya se
+            pueden realizar múltiples peticiones a la vez por parte de un cliente, la conexión puede ser reutilizada y
+            se
+            añadieron mejoras en la gestión de caché.
+        </p>
+        <div class="cabecera">
+            <img class="icono" src="img/Friki-Meme_29.bmp" alt="" srcset="">
+            <ul>
+                <li>El método <strong>PUT</strong> envía un objeto al servidor.</li>
+                <li>El método <strong>DELETE</strong> solicita al servidor que borre el recurso indicado en el mensaje.
+                </li>
+                <li>El método <strong>OPTIONS</strong> se utiliza para para negociar parámetros de la comunicación entre
+                    cliente y servidor.</li>
+            </ul>
+        </div>
+        <p> &#128406;<strong> HTTP/2:</strong> Aunque no modifica semánticamente el protocolo
+            anterior, sí incluye muchas mejoras que benefician tanto a usuarios como a cualquier persona que tenga una
+            web.
+            Por ejemplo, HTTP/2 incluye compresión, necesita menos recursos, lo que implica una menor latencia, el
+            servidor
+            puede responder a varias peticiones al mismo tiempo… En definitiva, mejoras que tienen como objetivo una Web
+            más
+            rápida y segura.
+        </p>
+        <div class="cabecera">
+            <img class="icono" src="img/Friki-Meme_29.bmp" alt="" srcset="">
+            <p>Pero este protocolo es vulnearable frente a ataques de terceros y pueden acceder a nuestra información.
+                Es por ello que surge el <a href="HTTPS.html">HTTPS</a></p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

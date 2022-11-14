@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+body 
+    h2 #{title}
+    img(src=src)
+    h3 #{precio}
+
+    each element in array
+        h2= element.titulo
+        img(src=element.img)
+        h3=element.precio
+    else
+        li No hay valores para mostrar
+
+    #{array}

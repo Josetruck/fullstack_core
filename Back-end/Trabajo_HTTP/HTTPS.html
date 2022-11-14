@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP y HTTPS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contenido">
+        <nav>
+            <a href="index.html"><div>Home</div></a>
+            <a href="HTTP.html"><div>HTTP</div></a>
+            <a href="HTTPS.html"><div style="font-weight: 900; border: 4px solid black;">HTTPS</div></a>
+        </nav>
+        <div class="cabecera">
+            <img class="icono" src="img/Friki-Meme_29.bmp" alt="" srcset="">
+        <h1>HTTPS</h1>
+    </div>
+    <h2>¿Qué es HTTPS?</h2>
+    <p> HTTPS utiliza una combinación de dos protocolos de comunicación (HTTP+SSL/TLS) que hace que cualquier tipo de
+        información que se transmita en la red sea cifrada y nadie pueda acceder a ella, únicamente navegador y servidor
+        web. Y para ello es necesario que tu web tenga instalado un Certificado SSL.</p>
+    <h2>¿Cómo sé que mi conexión es segura?</h2>
+    <p> Además de mostrarse HTTPS en la barra de direcciones al inicio de la URL de la página, también hay un elemento
+        que diferencia claramente una web segura y otra que no lo es: un candado.</p>
+    <p>En la actualidad, empleamos las páginas web para comprar online, pedir cita en el médico o realizar gestiones
+        bancarias. Es por esto que surge la necesidad de mantener los datos de los usuarios a salvo.</p>
+
+    <h2>SSL (Secure Sockets Layer)</h2>
+    <p>Es un título digital que se encarga de autentificar la identidad de tu web y cifra la información que tus visitas
+        reciben o envían al servidor, estableciendo una conexión segura que protege la transferencia de datos.</p>
+        <p>Para encriptar la información entre servidor y cliente se hace el uso de claves.</p>
+        <dl>
+            <dt>&#128406;Claves simétricas:</dt>
+            <dd>Se usa una misma clave para cifrar y descifrar mensajes en el emisor y el receptor. Las dos partes que se comunican han de ponerse de acuerdo de antemano sobre la clave a usar. Una vez que ambas partes tienen acceso a esta clave, el remitente cifra un mensaje usando la clave, lo envía al destinatario, y este lo descifra con la misma clave.</dd>
+            <dt>&#128406;Claves asimétricas:</dt>
+            <dd>Se usan dos claves, una clave pública y otra privada, para el envío de mensajes o datos informáticos. Siendo que la clave pública es la responsable del cifrado y la clave privada del descifrado. En cuanto al procedimiento, el destinatario genera ambas claves y comunica la clave pública al emisor del mensaje quien, por su parte, tiene ahora la opción de cifrar el mensaje. Una vez que se haya enviado el mensaje, solo se podrá descifrar con la clave privada.</dd>
+        </dl>
+
+    <h2>TLS (Transport Layer Security)</h2>
+    <p>Dado que el protocolo SSL v3.0 presentó estas vulnerabilidades, fue necesario desarrollar un nuevo tipo de
+        protocolo para asignar esta capa de cifrado de una manera más segura.
+        El principio de uso de TLS es unir las fortalezas de las claves asimétricas y simétricas durante el proceso de
+        comunicación. Dado que las claves asimétricas tienen un proceso de cifrado que involucra dos claves distintas,
+        por lo tanto, hay un tiempo de procesamiento más largo. Es por eso que TLS usa este proceso en la fase de
+        autenticación entre el cliente y el servidor.
+
+        Luego, hace uso de claves simétricas que tienen un proceso de encriptación con una sola clave, por lo que
+        requiere menos tiempo para su procesamiento.
+    </p>
+</div>
+</body>
+
+</html>
