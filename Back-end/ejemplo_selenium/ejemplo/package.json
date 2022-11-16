@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "chromedriver": "^107.0.3",
+    "geckodriver": "^3.2.0",
+    "selenium-webdriver": "^4.6.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test":"node ./test/test.js"
+  },
+  "name": "ejemplo",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

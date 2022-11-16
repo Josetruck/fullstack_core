@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Ginés Correhuela",
+        "especialidad": "Pediatra",
+        "duracion": 1,
+        "gabinete": 1
+    },
+    {
+        "nombre": "Marta Alhadro",
+        "especialidad": "Oftalmologa",
+        "duracion": 2,
+        "gabinete": 2
+    },
+    {
+        "nombre": "Blas Cantó",
+        "especialidad": "Salud mental",
+        "duracion": 1,
+        "gabinete": 3
+    },
+    {
+        "nombre": "Ginés Correhuela",
+        "especialidad": "Digestivo",
+        "duracion": 2,
+        "gabinete": 4
+    }
+]
