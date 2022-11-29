@@ -1,0 +1,16 @@
+.scoretable{
+    display: flex;
+    flex-direction: column;
+}
+.scorerow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.scorerow > *{
+    width: 33%;
+    text-align: center;
+    display: block;
+    border: 1px solid black;
+}
