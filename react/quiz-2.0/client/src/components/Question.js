@@ -6,6 +6,7 @@ import useSound from "use-sound"
 import sndOk from "../audios/sndOk.mp3"
 import sndNo from "../audios/sndNo.mp3"
 import sndLoad from "../audios/sndLoad.mp3"
+import Top10 from "./Top10";
 
 export default function Question() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -14,8 +15,8 @@ export default function Question() {
   const [gameState, setGameState] = useState("home")
   const [user, setUser] = useState("")
   const [storedScore, setStoredScore] = useState(false)
-  const [top10, setTop10] = useState("")
   const [popup, setPopup] = useState("")
+  const [top10, setTop10] = useState("")
 
 
   const [playsndOk] = useSound(sndOk);
@@ -87,23 +88,25 @@ export default function Question() {
       setCurrentQuestion(currentQuestion + 1)
     }
   })
-  useEffect(() => {
-    var stats = localStorage.storeScore
-    if (stats) {
-      stats = JSON.parse(stats)
-      console.log(stats)
-      var ordered = stats.sort(function (a, b) { return b.score - a.score })
-      console.log(ordered)
-      var top10 = ordered.slice(0, 10);
-    }
-    setTop10(top10)
-  }, [storedScore])
+
   useEffect(() => {
     if (currentQuestion > 9) {
       setGameState("finished")
 
     }
   }, [currentQuestion])
+
+  useEffect(() => {
+    var stats = localStorage.storeScore
+    if (stats) {
+        stats = JSON.parse(stats)
+        console.log(stats)
+        var ordered = stats.sort(function (a, b) { return b.score - a.score })
+        console.log(ordered)
+        var top10 = ordered.slice(0, 10);
+    }
+    setTop10(top10)
+}, [storedScore])
 
   function saveScore() {
     var today = new Date();
@@ -191,17 +194,9 @@ export default function Question() {
           <button onClick={() => saveScore()}>Guardar</button></div>
         : null}
       {gameState === "finished"
-        ? <div className="scoretable">
-          <h2 className="top10title">Top 10 Players</h2>
-          <p className="lineaH">---------------------------------------------------------------------</p>
-          <div className="scorerow"><h3>Name</h3><h3>Score</h3><h3>Date</h3></div>
-          <p className="lineaH">---------------------------------------------------------------------</p>
-        </div> : null}
-      {gameState === "finished"
-        ?
-        top10.map((e, i) => {
-          return <div className="scorerow"><h3>{e.user}</h3><p>{e.score}</p><p>{e.date}</p></div>
-        })
+        ? <div>
+          <Top10 score={top10}/>
+        </div>
         : null}
     </div>
   )

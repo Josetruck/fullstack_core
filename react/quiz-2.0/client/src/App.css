@@ -82,7 +82,7 @@ input:focus{
 
 .answers{
     z-index: 1;
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 50%;
     justify-content: center;
@@ -121,7 +121,7 @@ input:focus{
         padding: 0px 30px;
     }
     .answers{
-        position: absolute;
+        position: relative;
         width: 92%;
         top: 50%;
         justify-content: center;
