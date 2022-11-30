@@ -99,14 +99,14 @@ export default function Question() {
   useEffect(() => {
     var stats = localStorage.storeScore
     if (stats) {
-        stats = JSON.parse(stats)
-        console.log(stats)
-        var ordered = stats.sort(function (a, b) { return b.score - a.score })
-        console.log(ordered)
-        var top10 = ordered.slice(0, 10);
+      stats = JSON.parse(stats)
+      console.log(stats)
+      var ordered = stats.sort(function (a, b) { return b.score - a.score })
+      console.log(ordered)
+      var top10 = ordered.slice(0, 10);
     }
     setTop10(top10)
-}, [storedScore])
+  }, [storedScore])
 
   function saveScore() {
     var today = new Date();
@@ -145,6 +145,8 @@ export default function Question() {
     }, 2000)
   }
 
+
+
   return (
     <div className="game">
       {popup === "ok"
@@ -167,9 +169,9 @@ export default function Question() {
             <button onClick={() => setGameState("home")}>Finish Game</button>
           </div>
           <div className="card">
-            <p className="lineaH">---------------------------------------------------------------------</p>
+            <p className="lineaH">-----------------------------------------------------------------------------</p>
             <div className="upper"><p> Timer: {counter} segs</p> <p> Current Question: {currentQuestion}</p> <p> Score: {score}/10</p></div>
-            <p className="lineaH">---------------------------------------------------------------------</p>
+            <p className="lineaH">-----------------------------------------------------------------------------</p>
             <h2 dangerouslySetInnerHTML={{ __html: questions[currentQuestion] }} className="question"></h2>
             <div className="answers">
               <button className="A" onClick={() => check(0)} dangerouslySetInnerHTML={{ __html: answers[currentQuestion][0] }}></button>
@@ -190,12 +192,16 @@ export default function Question() {
         : null}
       {!storedScore && gameState === "finished"
         ? <div><p>Insert your name: </p>
-          <input type="text" onChange={(e) => setUser(e.target.value)} />
+          <input type="text" onKeyPress={(e) => {
+            if (e.key === "Enter") {
+              saveScore()
+            }
+          }} onChange={(e) => setUser(e.target.value)} />
           <button onClick={() => saveScore()}>Guardar</button></div>
         : null}
       {gameState === "finished"
         ? <div>
-          <Top10 score={top10}/>
+          <Top10 score={top10} />
         </div>
         : null}
     </div>

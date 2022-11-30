@@ -45,8 +45,7 @@ input:focus{
 .scorerow > *{
     width: 33%;
     text-align: center;
-    display: block;
-    border: 1px solid black;
+    margin: 10px
 }
 
 .lineaH{
@@ -87,8 +86,8 @@ input:focus{
     top: 50%;
     justify-content: center;
     display: grid;
-    grid-template-columns: 40% 40%;
-    grid-template-rows: 40% 40%;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 80% 80%;
     gap: 2vw;
     grid-template-areas:
     "A B"
